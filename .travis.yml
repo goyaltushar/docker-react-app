@@ -5,4 +5,4 @@ services:
 before_install:
     - docker build -t tushargoyal/react-app -f Dockerfile.dev .
 script:
-    - docker run tushargoyal/react-app npm run test -- --coverage
+    - docker run -e CI=true tushargoyal/react-app npm run test -- --coverage
